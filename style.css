@@ -39,6 +39,7 @@ header input {
     border: none;
     border-radius: 3px;
     padding: 0.5rem 1rem;
+    font-family: inherit;
 }
 
 header button {
@@ -127,6 +128,6 @@ header button {
 }
 
 .meal-body .fav-btn.active {
-    color: rgb(74, 127, 240)
+    color:  rgb(59, 199, 241);
 }
 
