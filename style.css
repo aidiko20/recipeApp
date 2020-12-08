@@ -102,9 +102,23 @@ header button {
 }
 
 .meal-header img {
-
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
 }
 
 .meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
 
+.meal-body h4 {
+    margin: 0;
+}
+
+.meal-body button {
+
+    background-color: transparent;
 }
