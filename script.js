@@ -21,7 +21,7 @@ async function getMealsBySearch(term) {
 };
 
 function addMeal(mealData, random = false) {
-    const meal = document.getElementById('div');
+    const meal = document.createElement('div');
     meal.classList.add('meal');
 
     meal.innerHTML = `            
@@ -29,10 +29,10 @@ function addMeal(mealData, random = false) {
         ${random ? `
         <span class="random">Random Recipe</span>` : ' '}
             <img src="${mealData.strMealThumb}" 
-            alt="${mealData.Meal}">
+            alt="${mealData.strMeal}">
         </div>
         <div class="meal-body">
-            <h4>${mealData.Meal}</h4>
+            <h4>${mealData.strMeal}</h4>
             <button class="fav-btn active"><i class="fas fa-heart"></i></button>
         </div>
     </div>
