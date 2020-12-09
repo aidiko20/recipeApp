@@ -3,9 +3,12 @@ getRandomMeal();
  
 async function getRandomMeal() {
     const resp = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
-    const randomMeal = await resp.json();
+    const respData = await resp.json();
+    const randomMeal = respData.meals[0];
 
     console.log(randomMeal);
+
+    loadRandomMeal();
 }
 
  async function getMealById(id) {
