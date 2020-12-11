@@ -91,10 +91,6 @@ header button {
     width: 75px;
 }
 
-.fav-meals li span:hover {
-    white-space: normal;
-    overflow: auto;
-}
 
 .fav-meals li img {
     border: 2px solid #ffffff;
