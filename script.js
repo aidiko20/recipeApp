@@ -63,8 +63,6 @@ function addMeal(mealData, random = false) {
             addMealLS(mealData.idMeal);
             btn.classList.add("active");
         }
-
-        fetchFavMeals();
     });
 
     meals.appendChild(meal);
@@ -93,7 +91,7 @@ function getMealsLS() {
 
 async function fetchFavMeals() {
     favoriteContainer.innerHTML = "";
-    
+
     const mealIds = getMealsLS();
     const meals = [];
 
@@ -115,6 +113,8 @@ function addMealFav(mealData) {
       const btn = favMeal.querySelector('clear');
       btn.addEventListener('click', () => {
           removeMealLS(mealData.idMeal);
+
+          fetchFavMeals();
       });
     favoriteContainer.appendChild(favMeal);
 }
