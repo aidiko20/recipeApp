@@ -2,29 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="mobile-container">
         <header>
-            <input type="text" id="search-term">
+            <input type="text" id="search-term" />
             <button id="search"><i class="fas fa-search"></i></button>
         </header>
         <div class="fav-container">
             <h3>Favorite Meals</h3>
-            <ul class="fav-meals" id="fav-meals">
+            <ul class="fav-meals" id="fav-meals"></ul>
+        </div>
+        <div class="meals" id="meals"></div>
+    </div>
+    <div id="meal-info" class="meal-info">
+        <div>
+            <h1>Meal title</h1>
+            <img src="" alt="">
+        </div>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam sapiente amet, aliquid qui corporis
+                asperiores ad nihil, culpa, quo a doloribus perferendis accusantium beatae deleniti sint magni facilis
+                molestiae minima.</p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
         </div>
-        <div class="meals" id="meals">
-        </div>
     </div>
-
 </body>
 
 </html>

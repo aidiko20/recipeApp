@@ -1,4 +1,4 @@
-const meals = document.getElementById("meals");
+const mealsEl = document.getElementById("meals");
 const favoriteContainer = document.getElementById("fav-meals");
 const searchTerm = document.getElementById("search-term");
 const searchBtn = document.getElementById("search");
@@ -71,6 +71,8 @@ function addMeal(mealData, random = false) {
             addMealLS(mealData.idMeal);
             btn.classList.add("active");
         }
+
+        fetchFavMeals();
     });
 
     meals.appendChild(meal);
@@ -118,21 +120,24 @@ function addMealFav(mealData) {
     <button class="clear"><i class="fas fa-window-close"></button>
       `;
 
-      const btn = favMeal.querySelector('clear');
-      btn.addEventListener('click', () => {
-          removeMealLS(mealData.idMeal);
+    const btn = favMeal.querySelector('clear');
+    btn.addEventListener('click', () => {
+        removeMealLS(mealData.idMeal);
 
-          fetchFavMeals();
-      });
+        fetchFavMeals();
+    });
     favoriteContainer.appendChild(favMeal);
 }
 
 searchBtn.addEventListener('click', async () => {
-     const search = searchTerm.value;
-     const meals = await getMealsBySearch(search);
 
-     meals.forEach(meal => {
-         addMeal(meal);
-     });
+    mealsEl.innerHTML = "";
+    const search = searchTerm.value;
+    const meals = await getMealsBySearch(search);
 
+    if (meals) {
+        meals.forEach(meal => {
+            addMeal(meal);
+        });
+    }
 });
