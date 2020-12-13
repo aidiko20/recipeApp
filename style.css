@@ -153,7 +153,7 @@ header button {
     color:  rgb(59, 199, 241);
 }
 
-.meal-info-container {
+.popup-container {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -165,12 +165,12 @@ header button {
     bottom: 0;
 }
 
-.meal-info-container.hidden {
+.popup-container.hidden {
     opacity: 0;
     pointer-events: none;
 }
 
-.meal-info {
+.popup {
     background-color: #fff;
     border-radius: 5px;
     padding: 0 2rem;
@@ -178,11 +178,7 @@ header button {
     width: 100%;
 }
 
-.meal-info h1 {
-    text-align: center;
-}
-
-.meal-info  .close-popup {
+.popup .close-popup {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -190,4 +186,7 @@ header button {
     position: absolute;
     top: 1rem;
     right: 1rem;
+}
+.meal-info h1 {
+    text-align: center;
 }
